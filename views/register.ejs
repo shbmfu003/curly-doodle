@@ -1,0 +1,70 @@
+<div class="row mt-5">
+  <div class="col-md-6 m-auto text-muted">
+    <div class="card card-body">
+      <h1 class="display-5 text-center mb-5">
+        <i class="fas fa-user-plus"></i> Register
+      </h1>
+
+      <form action="/users/register" method="POST">
+
+        <div class="form-group">
+          <div class="input-group mb-4">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-user"></i></span>
+            </div>
+            <input type="name" id='name' name='name' class="form-control" placeholder="Enter Full Name" value="<%= typeof name != 'undefined' ? name : '' %>" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="input-group mb-4">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+            </div>
+            <input type="email"
+              id='email'
+              name='email'
+              class="form-control"
+              placeholder="Enter Email"
+              value="<%= typeof email != 'undefined' ? email : '' %>"
+              required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="input-group mb-4">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-lock"></i></span>
+            </div>
+            <input type="password"
+              id='name'
+              name='password'
+              class="form-control"
+              placeholder="Enter Password"
+              value="<%= typeof password != 'undefined' ? password : '' %>"
+              required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="input-group mb-4">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-lock"></i></span>
+            </div>
+            <input type="password"
+            id='confirmPassword'
+            name='confirmPassword'
+            class="form-control"
+            placeholder="Confirm Password"
+            value="<%= typeof confirmPassword != 'undefined' ? confirmPassword : '' %>"
+            required>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-outline-primary btn-block"> Register</button>
+        <p class="mt-4 text-center">
+          Have An Account? <a href="/users/login">Login</a>
+        </p>
+      </form>
+    </div>
+  </div>
+</div>

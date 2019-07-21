@@ -1,0 +1,35 @@
+<div class="row mt-5">
+  <div class="col-md-6 m-auto text-muted">
+    <div class="card card-body">
+      <h1 class="display-5 text-center mb-5"><i class="fas fa-sign-in-alt"></i> Login</h1>
+
+      <form action="/users/login" method="POST">
+        <div class="form-group">
+          <div class="input-group mb-4">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+            </div>
+            <input type="email" id='email' name='email' class="form-control" placeholder="Enter Email">
+            <div class="input-group-append">
+              <span class="input-group-text">@myuni.ac.za</span>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group mb-4">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-user-lock"></i></span>
+            </div>
+            <input type="password" id='password' name='password' class="form-control" placeholder="Enter Password">
+          </div>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-outline-success btn-block">Login</button>
+        </div>
+        <p class="mt-4 text-center">
+          No Account? <a href="/users/register">Register</a>
+        </p>
+      </form>
+    </div>
+  </div>
+</div>
