@@ -6,6 +6,9 @@ const session = require('express-session');
 const passport = require('passport');
 const config = require('./config/database');
 
+// Passport Config
+require('./config/passport')(passport);
+
 // Connect To Database
 mongoose.connect(config.database, {
   useNewUrlParser: true
@@ -50,7 +53,7 @@ app.use(passport.session());
 app.use(flash());
 
 // Global Variables
-app.use(function(req, res, next) {
+app.use((req, res, next) => {
   res.locals.success_msg = req.flash('success_msg');
   res.locals.error_msg = req.flash('error_msg');
   res.locals.error = req.flash('error');
